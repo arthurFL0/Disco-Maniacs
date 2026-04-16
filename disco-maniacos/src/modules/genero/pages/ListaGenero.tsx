@@ -60,7 +60,7 @@ export function ListaGenero() {
                   <Button to={`editar/${genero.id}`} component={Link} variant="contained" size="small">
                     Editar
                   </Button>
-                  <Button onClick={() => excluirGenero(genero.id)} variant="contained" color="error" size="small" sx={{ marginLeft: 1 }}>
+                  <Button onClick={() => genero.id && excluirGenero(genero.id)} variant="contained" color="error" size="small" sx={{ marginLeft: 1 }}>
                     Excluir
                   </Button>
                 </TableCell>

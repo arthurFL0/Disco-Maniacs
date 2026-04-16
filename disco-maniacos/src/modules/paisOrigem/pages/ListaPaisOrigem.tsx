@@ -1,4 +1,4 @@
-import { artistasMock } from "../mock/artista-mock"
+import { paisesOrigemMock } from "../mock/pais-origem-mock"
 import {
   Table, TableBody, TableCell, TableContainer,
   TableHead, TableRow, Paper, Button, Box, TextField
@@ -6,29 +6,25 @@ import {
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react";
 
-export function ListaArtista() {
-  const [artistas, setArtistas] = useState(artistasMock);
+export function ListaPaisOrigem() {
+  const [paises, setPaises] = useState(paisesOrigemMock);
   const [filtro, setFiltro] = useState('');
-  const [artistasFiltrados, setArtistasFiltrados] = useState(artistas)
+  const [paisesFiltrados, setPaisesFiltrados] = useState(paises)
 
-  // useEffect(() => {
-  //   setArtistas(artistasMock)
-  // }, [])
-
-  function excluirArtista(id : number){
-    const artistasAtt = artistas.filter((a)=> {
-        return a.id !== id;
+  function excluirPais(id : number){
+    const paisesAtt = paises.filter((p)=> {
+        return p.id !== id;
     })
-    setArtistas(artistasAtt);
+    setPaises(paisesAtt);
   }
 
   useEffect(() => {
-    setArtistasFiltrados(
-      artistas.filter((a) =>
-        a.nome.toLowerCase().includes(filtro.toLowerCase())
+    setPaisesFiltrados(
+      paises.filter((p) =>
+        p.nome.toLowerCase().includes(filtro.toLowerCase())
       )
     )
-  }, [filtro, artistas])
+  }, [filtro, paises])
 
   return (
     <>
@@ -51,15 +47,15 @@ export function ListaArtista() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {artistasFiltrados.map((artista) => (
-            <TableRow key={artista.id}>
-              <TableCell>{artista.id}</TableCell>
-              <TableCell>{artista.nome}</TableCell>
+          {paisesFiltrados.map((pais) => (
+            <TableRow key={pais.id}>
+              <TableCell>{pais.id}</TableCell>
+              <TableCell>{pais.nome}</TableCell>
               <TableCell align="center">
-                <Button to={`editar/${artista.id}`}  component={Link} variant="contained" size="small">
+                <Button to={`editar/${pais.id}`}  component={Link} variant="contained" size="small">
                   Editar
                 </Button>
-                <Button onClick={() => artista.id && excluirArtista(artista.id)} variant="contained" color="error" size="small" sx={{marginLeft: 1}}>
+                <Button onClick={() => pais.id && excluirPais(pais.id)} variant="contained" color="error" size="small" sx={{marginLeft: 1}}>
                   Excluir
                 </Button>
               </TableCell>

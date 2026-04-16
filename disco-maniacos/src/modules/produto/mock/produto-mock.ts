@@ -2,6 +2,7 @@ import { Produto } from "../../../types/Produto";
 import { artistasMock } from "../../artista/mock/artista-mock";
 import { formatosMock } from "../../formato/mock/formato-mock";
 import { generosMock } from "../../genero/mock/genero-mock";
+import { paisesOrigemMock } from "../../paisOrigem/mock/pais-origem-mock";
 
 export const produtosMock: Produto[] = [
     {
@@ -14,7 +15,8 @@ export const produtosMock: Produto[] = [
         preco: 150.00,
         genero: generosMock.filter(g => g.nome === 'Samba'),
         formato: formatosMock[0],
-        artista: artistasMock.find(a => a.nome === 'Adoniran Barbosa')!
+        artista: artistasMock.find(a => a.nome === 'Adoniran Barbosa')!,
+        pais_origem: paisesOrigemMock.find(p => p.nome === 'Brasil')!
     },
     {
         id: 2,
@@ -26,7 +28,8 @@ export const produtosMock: Produto[] = [
         preco: 250.00,
         genero: generosMock.filter(g => g.nome === 'Hard Rock' || g.nome === 'Rock'),
         formato: formatosMock[0],
-        artista: artistasMock.find(a => a.nome === 'Black Sabbath')!
+        artista: artistasMock.find(a => a.nome === 'Black Sabbath')!,
+        pais_origem: paisesOrigemMock.find(p => p.nome === 'Reino Unido')!
     },
     {
         id: 3,
@@ -38,6 +41,7 @@ export const produtosMock: Produto[] = [
         preco: 120.00,
         genero: generosMock.filter(g => g.nome === 'Rock'),
         formato: formatosMock[0],
-        artista: artistasMock.find(a => a.nome === 'Geese')!
+        artista: artistasMock.find(a => a.nome === 'Geese')!,
+        pais_origem: paisesOrigemMock.find(p => p.nome === 'Estados Unidos')!
     }
 ];

@@ -1,6 +1,7 @@
 import { Artista } from "./Artista";
 import { Formato } from "./Formato";
 import { Genero } from "./Genero";
+import { PaisOrigem } from "./PaisOrigem";
 
 export type Produto = {
     id: number | null;
@@ -13,4 +14,5 @@ export type Produto = {
     genero : Genero[];
     formato: Formato;
     artista: Artista;
+    pais_origem: PaisOrigem;
 }

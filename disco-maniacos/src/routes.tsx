@@ -4,6 +4,7 @@ import { FormatoRoutes } from "./modules/formato/routes";
 import { GeneroRoutes } from "./modules/genero/routes";
 import { ProdutoRoutes } from "./modules/produto/routes";
 import { VendaRoutes } from "./modules/venda/routes";
+import { PaisOrigemRoutes } from "./modules/paisOrigem/routes";
 import {HomePage} from "./modules/home/homepage"
 export function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ export function AppRoutes() {
       <Route path="/generos/*" element={<GeneroRoutes/>}/>
       <Route path="/produtos/*" element={<ProdutoRoutes/>}/>
       <Route path="/vendas/*" element={<VendaRoutes/>}/>
+      <Route path="/paises-origem/*" element={<PaisOrigemRoutes/>}/>
     </Routes>
   );
 }

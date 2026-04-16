@@ -66,10 +66,13 @@ export function ListaProduto() {
                 <TableCell align="right">R$ {Number(produto.preco).toFixed(2)}</TableCell>
                 <TableCell align="right">{produto.quantidade}</TableCell>
                 <TableCell align="center">
-                  <Button to={`editar/${produto.id}`} component={Link} variant="contained" size="small">
+                  <Button to={`detalhar/${produto.id}`} component={Link} variant="contained" size="small" >
+                    Detalhes
+                  </Button>
+                  <Button to={`editar/${produto.id}`} component={Link} variant="contained" size="small" sx={{ marginLeft: 1 }}>
                     Editar
                   </Button>
-                  <Button onClick={() => excluirProduto(produto.id)} variant="contained" color="error" size="small" sx={{ marginLeft: 1 }}>
+                  <Button onClick={() => produto.id && excluirProduto(produto.id)} variant="contained" color="error" size="small" sx={{ marginLeft: 1 }}>
                     Excluir
                   </Button>
                 </TableCell>

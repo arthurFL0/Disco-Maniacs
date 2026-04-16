@@ -56,7 +56,7 @@ export function ListaFormato() {
                   <Button to={`editar/${formato.id}`} component={Link} variant="contained" size="small">
                     Editar
                   </Button>
-                  <Button onClick={() => excluirFormato(formato.id)} variant="contained" color="error" size="small" sx={{ marginLeft: 1 }}>
+                  <Button onClick={() => formato.id && excluirFormato(formato.id)} variant="contained" color="error" size="small" sx={{ marginLeft: 1 }}>
                     Excluir
                   </Button>
                 </TableCell>

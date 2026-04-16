@@ -13,6 +13,7 @@ function App() {
         <NavDropDown label={'Artista'}  info = {[{descricao: 'Cadastrar', url: '/artistas/adicionar'}, {descricao:'Listar', url: '/artistas'}]}/>
         <NavDropDown label={'Gêneros'}  info = {[{descricao: 'Cadastrar', url: '/generos/adicionar'},  {descricao:'Listar', url: '/generos'}]}/>
         <NavDropDown label={'Formatos'} info = {[{descricao: 'Cadastrar', url: '/formatos/adicionar'}, {descricao:'Listar', url: '/formatos'}]}/>
+        <NavDropDown label={'País Origem'} info = {[{descricao: 'Cadastrar', url: '/paises-origem/adicionar'}, {descricao:'Listar', url: '/paises-origem'}]}/>
         <NavDropDown label={'Vendas'}   info = {[{descricao: 'Realizar Venda', url: '/vendas/realizar'}, {descricao:'Listar', url: '/vendas'}]}/>
       </Header>
       <Container maxWidth="lg">
